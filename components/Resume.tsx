@@ -1,0 +1,30 @@
+import Reveal from "./Reveal";
+
+export default function Resume() {
+  return (
+    <section className="section section--raised section--tight" id="resume">
+      <div className="wrap">
+        <Reveal>
+          <div className="resume-panel">
+            <div className="resume-panel__left">
+              <span className="eyebrow" style={{ marginBottom: 14 }}>08 · Resume</span>
+              <h3>The short version, on paper.</h3>
+              <p>Role, tools, and the systems behind them — for anyone who needs it in a single file.</p>
+            </div>
+            <div className="resume-panel__actions">
+              <a href="/resume.pdf" className="btn btn--primary" download>
+                Download CV <span className="btn__arrow" aria-hidden="true">↓</span>
+              </a>
+              <a href="/resume.pdf" className="btn btn--ghost" target="_blank" rel="noopener noreferrer">
+                View Resume
+              </a>
+            </div>
+          </div>
+        </Reveal>
+        <p className="mono" style={{ color: "var(--ink-faint)", marginTop: 16 }}>
+          Placeholder link — add resume.pdf to /public before deploying.
+        </p>
+      </div>
+    </section>
+  );
+}
