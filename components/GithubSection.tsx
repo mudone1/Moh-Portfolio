@@ -12,7 +12,7 @@ export default function GithubSection() {
       <div className="wrap">
         <div className="section-head">
           <div className="section-head__meta">
-            <span className="eyebrow">07 · Open Work</span>
+            <span className="eyebrow eyebrow--pill">Open Work</span>
             <h2 className="display-2">Open work. Real systems.</h2>
           </div>
           {/* TODO: replace href with the real GitHub profile URL */}

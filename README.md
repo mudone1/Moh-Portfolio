@@ -1,22 +1,21 @@
 # Muhammed Abdulwahab — Portfolio (Next.js)
 
-A real Next.js 14 (App Router) + TypeScript + Tailwind CSS project — not a
-static export. Monochrome design system (black / white / gray only),
-Framer Motion for scroll reveals and the scroll-progress trace, a
-mix-blend-mode cursor, and a signature font animation on the hero headline
-using the Recursive variable font.
+A Next.js 14 (App Router) + TypeScript + Tailwind CSS project. Bold, editorial
+design system — warm flame orange/red, near-black, and cream — inspired by a
+reference the client shared, adapted to the "systems builder" positioning:
+a giant name treatment behind a portrait cutout in the hero, numbered service
+rows, color-tile project cards, a bento-style highlights grid, an editorial
+photo strip in About, and an FAQ accordion. Framer Motion drives scroll
+reveals and the FAQ; the hero keeps its animated "live pipeline" system-trace
+diagram as a signature detail.
 
 ## A note on how this was built
 
 This project was generated in a sandboxed environment with no access to the
 npm registry, so `npm install` and `next build` could not be run or verified
 here. The code follows standard, current Next.js/TypeScript/Tailwind
-conventions throughout, but **you should run a full install and build
-yourself before deploying** — see "First run" below. If anything doesn't
-compile, it's most likely a small, easy-to-spot issue (a missing prop, a
-typo) rather than a structural one; every file is plain, readable
-TypeScript/TSX, so an employer (or Claude Code) can review or fix it in
-minutes.
+conventions throughout, but **run a full install and build yourself before
+deploying** — see "First run" below.
 
 ## First run
 
@@ -34,8 +33,8 @@ npm run start
 
 ## Deploying to Vercel
 
-Push this to a GitHub repo and import it in Vercel — it auto-detects
-Next.js, no config needed. Or from the project root: `vercel --prod`.
+Push to GitHub and import the repo in Vercel (auto-detects Next.js), or run
+`vercel --prod` from the project root.
 
 ## Structure
 
@@ -49,60 +48,69 @@ app/
     globetech/page.tsx
     whatsapp-ai-automation/page.tsx
 components/
-  Nav.tsx, Footer.tsx            Shared chrome
-  Hero.tsx, About.tsx, Work.tsx,
-  Capabilities.tsx, Process.tsx,
-  Automation.tsx, Experience.tsx,
-  GithubSection.tsx, Resume.tsx,
-  Contact.tsx                    Home page sections
+  Nav.tsx, Footer.tsx             Shared chrome (Nav takes a `flameHero` prop
+                                   for the home page's white-on-orange state)
+  Hero.tsx                        Flame hero — name backdrop, portrait cutout,
+                                   floating "live pipeline" + contact cards
+  About.tsx                       Editorial photo/diagram gallery strip + philosophy
+  Work.tsx                        Color-tile project cards
+  Capabilities.tsx                Numbered service rows (Build/Data/Automation/AI/Product)
+  Highlights.tsx                  Bento-grid highlights (real, non-fabricated facts only)
+  Process.tsx, Automation.tsx,
+  Experience.tsx, GithubSection.tsx,
+  Resume.tsx, Contact.tsx         Home page sections
+  Faq.tsx                         Accordion (Framer Motion AnimatePresence)
   CaseStudyShell.tsx,
-  CaseStudyBlock.tsx             Shared case-study layout
-  Reveal.tsx                     Scroll-triggered fade/slide (Framer Motion)
-  AnimatedHeadline.tsx           Hero headline font-variation animation
-  FlowPulse.tsx                  Animated dot on the hero system diagram
-  CursorDot.tsx                  Mix-blend-mode cursor follower
-  ScrollProgress.tsx             Top scroll-progress bar
+  CaseStudyBlock.tsx              Shared case-study layout
+  Reveal.tsx                      Scroll-triggered fade/slide (Framer Motion)
+  AnimatedHeadline.tsx            Variable-font "materialize" animation (used
+                                   on the hero's giant firstname)
+  FlowPulse.tsx                   Animated dot on the "live pipeline" diagram
+  CursorDot.tsx                   Flame-colored cursor follower
+  ScrollProgress.tsx              Top scroll-progress bar
 public/
-  robots.txt
-  resume.pdf                     ← add this yourself (see below)
+  muhammed-cutout.png             Background-removed portrait for the hero
+  muhammed-abdulwahab.jpg         Original rectangular photo (used in About gallery)
+  resume.pdf                      ← add this yourself (see below)
 ```
 
 ## Design system
 
-- All color, spacing, radius and easing tokens live as CSS custom properties
-  at the top of `app/globals.css`, and are also exposed to Tailwind via
-  `tailwind.config.ts` (`bg-ink`, `text-ink-soft`, `font-display`, etc.) —
-  use either the CSS classes already in the file or Tailwind utilities.
+- Tokens live as CSS custom properties at the top of `app/globals.css`:
+  `--flame` / `--flame-dark` / `--flame-light` / `--flame-soft` for the
+  orange-red accent, `--bg` / `--bg-raised` for the cream base, `--invert-bg`
+  for near-black cards/sections.
 - Fonts: **Recursive** (variable, animated) for display/headings, **Inter**
-  for body copy, **JetBrains Mono** for labels, tags, and metadata. Loaded
-  via Google Fonts in `app/layout.tsx`.
-- Pure black / white / gray palette — no color accent. "Accent" moments are
-  done through inversion (black buttons that invert on hover, an inverted
-  full-bleed section for AI & Automation) rather than color.
-- Motion: scroll reveals and the progress bar use Framer Motion; the hero
-  headline animates its variable-font axes on load (a "materialising" effect
-  — business language turning into a more systemised, semi-mono type); a
-  cursor dot uses `mix-blend-mode: difference` to invert whatever it passes
-  over. Everything checks `prefers-reduced-motion` (via Framer Motion's
-  `useReducedMotion()` or a CSS media query) and simplifies or disables
-  accordingly.
+  for body copy, **JetBrains Mono** for labels, tags, and metadata.
+- Motion: scroll reveals and the FAQ accordion use Framer Motion; the hero's
+  giant firstname animates its variable-font axes on load; a flame-colored
+  cursor dot follows the pointer. The hero's "live pipeline" system-trace
+  diagram (the animated node flow) is the one motion element carried over
+  from the previous monochrome version by request. Everything checks
+  `prefers-reduced-motion` and simplifies or disables accordingly.
+- **No fabricated content.** The bento highlights, FAQ, and all copy stick to
+  real, verifiable facts (project names, stated focus areas, stated
+  availability) — no invented client counts, revenue, testimonials, or
+  awards, even though the visual reference included some of those sections.
+
+## The hero portrait
+
+`public/muhammed-cutout.png` was background-removed from your uploaded photo
+using a flood-fill + soft geometric fade (no external tool/API — this was
+done locally in the sandbox). It reads as a clean "bust fading into color"
+treatment rather than a pixel-perfect die-cut silhouette, since the shirt
+was too close in tone to the background for a fully clean cutout. If you
+have (or can generate) a proper cutout with a transparent background later,
+just swap the file — same filename, same dimensions expected (~1103×1078).
 
 ## Before you publish — replace these placeholders
 
-- **Contact info** — email (`hello@example.com`), LinkedIn URL, GitHub
-  profile URL in `components/Nav.tsx` (mobile menu inherits from Nav data),
-  `components/Footer.tsx`, `components/Contact.tsx`, and
-  `components/GithubSection.tsx`
-- **GitHub repos** — the three placeholder cards in `components/GithubSection.tsx`,
-  or wire the section up to the GitHub API for a live feed
-- **Experience dates** — `components/Experience.tsx` has `[Add dates]`
-  placeholders and one fully-placeholder role at the end; nothing there was
-  invented
-- **`public/resume.pdf`** — add the real file; delete `public/RESUME_PLACEHOLDER.md`
-  once you do
+- **Contact info** — email, LinkedIn URL, GitHub profile URL in
+  `components/Nav.tsx`, `components/Footer.tsx`, `components/Contact.tsx`,
+  and `components/GithubSection.tsx`
+- **GitHub repos** — the three placeholder cards in `components/GithubSection.tsx`
+- **Experience dates** — `components/Experience.tsx`
+- **`public/resume.pdf`** — add the real file
 - **Case study screenshots** — the "Screenshot placeholder" blocks in each
   `app/work/*/page.tsx` file
-- **`og-cover.png`** — a 1200×630 social preview image referenced in
-  `app/layout.tsx`'s metadata (optional but recommended)
-- WhatsApp contact — not included; add it to `components/Contact.tsx` only
-  if you want it listed publicly
+- **`og-cover.png`** — a 1200×630 social preview image (optional)

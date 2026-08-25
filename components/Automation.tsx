@@ -16,7 +16,7 @@ export default function Automation() {
       <div className="wrap">
         <div className="section-head">
           <div className="section-head__meta">
-            <span className="eyebrow">05 · AI &amp; Automation</span>
+            <span className="eyebrow eyebrow--pill">AI &amp; Automation</span>
           </div>
         </div>
 

@@ -16,7 +16,7 @@ export default function Process() {
       <div className="wrap">
         <div className="section-head">
           <div className="section-head__meta">
-            <span className="eyebrow">04 · How I Think</span>
+            <span className="eyebrow eyebrow--pill">How I Think</span>
             <h2 className="display-2">
               I don&rsquo;t just write software.
               <br />I solve systems.

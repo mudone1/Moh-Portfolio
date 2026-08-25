@@ -26,7 +26,7 @@ export default function CaseStudyShell({
         <section className="section cs-hero">
           <div className="wrap">
             <Link href="/#work" className="cs-hero__back">← Back to selected work</Link>
-            <span className="eyebrow">{eyebrow}</span>
+            <span className="eyebrow eyebrow--pill">{eyebrow}</span>
             <h1 className="display-1" style={{ marginTop: 18 }}>{title}</h1>
             <p className="lede" style={{ marginTop: 20 }}>{lede}</p>
 
@@ -46,7 +46,7 @@ export default function CaseStudyShell({
         <section className="section section--tight">
           <div className="wrap cs-next">
             <div>
-              <span className="eyebrow">Next</span>
+              <span className="eyebrow eyebrow--pill">Next</span>
               <div className="cs-next__title" style={{ marginTop: 10 }}>{nextTitle}</div>
             </div>
             <Link href={nextHref} className="btn btn--primary">

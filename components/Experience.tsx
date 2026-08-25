@@ -33,7 +33,7 @@ export default function Experience() {
       <div className="wrap">
         <div className="section-head">
           <div className="section-head__meta">
-            <span className="eyebrow">06 · Experience</span>
+            <span className="eyebrow eyebrow--pill">Experience</span>
             <h2 className="display-2">Business and technology, together.</h2>
           </div>
         </div>

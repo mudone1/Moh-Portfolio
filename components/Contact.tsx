@@ -6,7 +6,7 @@ export default function Contact() {
       <div className="wrap">
         <div className="contact__grid">
           <Reveal>
-            <span className="eyebrow">09 · Contact</span>
+            <span className="eyebrow eyebrow--pill">Contact</span>
             <h2 className="display-2 contact__title" style={{ marginTop: 20 }}>
               Have a problem worth automating?
             </h2>

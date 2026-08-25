@@ -2,29 +2,34 @@ import Reveal from "./Reveal";
 
 const GROUPS = [
   {
-    label: "Build",
-    items: ["Node.js", "TypeScript / JavaScript", "React & Next.js", ".NET"],
-    note: "The application layer.",
+    num: "01",
+    title: "Build",
+    desc: "The application layer — full-stack products built to be maintained, not just demoed.",
+    tags: ["Node.js", "TypeScript / JavaScript", "React & Next.js", ".NET"],
   },
   {
-    label: "Data",
-    items: ["PostgreSQL", "Supabase", "Database design", "Data workflows"],
-    note: "Where the system remembers.",
+    num: "02",
+    title: "Data",
+    desc: "Where the system remembers — modeled correctly so reporting and dashboards are simple.",
+    tags: ["PostgreSQL", "Supabase", "Database design", "Data workflows"],
   },
   {
-    label: "Automation",
-    items: ["API integrations", "Workflow automation", "WhatsApp automation", "Business process automation"],
-    note: "Where the manual work disappears.",
+    num: "03",
+    title: "Automation",
+    desc: "Where the manual work disappears — APIs and workflows that replace repetitive coordination.",
+    tags: ["API integrations", "Workflow automation", "WhatsApp automation", "Business process automation"],
   },
   {
-    label: "AI",
-    items: ["LLM integrations", "AI assistants", "Prompt engineering", "AI agents"],
-    note: "Where the system starts deciding.",
+    num: "04",
+    title: "AI",
+    desc: "Where the system starts deciding — understanding requests and routing them correctly.",
+    tags: ["LLM integrations", "AI assistants", "Prompt engineering", "AI agents"],
   },
   {
-    label: "Product",
-    items: ["System architecture", "MVP development", "Business analysis", "Problem framing"],
-    note: "Where it all has to fit together.",
+    num: "05",
+    title: "Product",
+    desc: "Where it all has to fit together — architecture, scope, and problem framing.",
+    tags: ["System architecture", "MVP development", "Business analysis", "Problem framing"],
   },
 ];
 
@@ -34,26 +39,31 @@ export default function Capabilities() {
       <div className="wrap">
         <div className="section-head">
           <div className="section-head__meta">
-            <span className="eyebrow">03 · Capabilities</span>
-            <h2 className="display-2">What he can build, grouped by what it does.</h2>
+            <span className="eyebrow eyebrow--pill">Capabilities</span>
+            <h2 className="display-2">
+              What I build, <span style={{ color: "var(--flame)" }}>for your business.</span>
+            </h2>
           </div>
         </div>
 
-        <Reveal>
-          <div className="cap-grid">
-            {GROUPS.map((group) => (
-              <div className="cap-cell" key={group.label}>
-                <span className="cap-cell__label">{group.label}</span>
-                <ul>
-                  {group.items.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-                <span className="cap-cell__note">{group.note}</span>
+        <div>
+          {GROUPS.map((group, i) => (
+            <Reveal key={group.num} delay={i * 0.03}>
+              <div className="service-row">
+                <span className="service-row__num">{group.num}</span>
+                <div className="service-row__title">{group.title}</div>
+                <div>
+                  <p className="service-row__desc">{group.desc}</p>
+                  <div className="service-row__tags">
+                    {group.tags.map((tag) => (
+                      <span key={tag}>{tag}</span>
+                    ))}
+                  </div>
+                </div>
               </div>
-            ))}
-          </div>
-        </Reveal>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -11,7 +11,7 @@ const LINKS = [
   { href: "/#contact", label: "Contact" },
 ];
 
-export default function Nav() {
+export default function Nav({ flameHero = false }: { flameHero?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -26,9 +26,11 @@ export default function Nav() {
     document.body.style.overflow = menuOpen ? "hidden" : "";
   }, [menuOpen]);
 
+  const navClass = scrolled ? "nav is-scrolled" : flameHero ? "nav on-flame" : "nav";
+
   return (
     <>
-      <header className={`nav ${scrolled ? "is-scrolled" : ""}`}>
+      <header className={navClass}>
         <div className="nav__inner">
           <Link href="/#top" className="nav__name">
             <span className="dot" aria-hidden="true" />

@@ -5,80 +5,85 @@ const PROJECTS = [
   {
     index: "01",
     slug: "tdis-logistics",
-    role: "Travel & ticketing operations · Automation",
+    role: "Travel & ticketing · Automation",
     title: "TDIS Logistics",
-    desc: "Systems and automation built around airline ticketing, travel operations, and WhatsApp-based workflows — replacing manual, message-by-message coordination with structured, repeatable processes and reporting.",
-    tags: ["WhatsApp automation", "Workflow tooling", "Reporting"],
+    desc: "Automation and reporting systems built around airline ticketing, travel operations, and WhatsApp-based workflows.",
+    tone: "flame" as const,
   },
   {
     index: "02",
     slug: "globetech",
-    role: "Application & grant platform · Operations",
+    role: "Application & grant platform",
     title: "GlobeTech",
-    desc: "A functioning operational platform for application workflows, referrals, and staff hierarchy — not a marketing site. Built for dashboards, KPI visibility, and data management across an organisation, not a single user.",
-    tags: ["Application workflows", "Dashboards", "Staff hierarchy"],
+    desc: "A functioning operational platform for application workflows, referrals, staff hierarchy, and dashboards.",
+    tone: "dark" as const,
   },
   {
     index: "03",
     slug: "whatsapp-ai-automation",
-    role: "AI-assisted conversations · Automation platform",
-    title: "WhatsApp / AI Automation Platform",
-    desc: "Backend and AI layer for WhatsApp-based booking and business conversations — the direction of Muhammed's future work through Fudur Automation, turning repetitive business processes into automated systems.",
-    tags: ["AI agents", "WhatsApp API", "Booking automation"],
+    role: "AI-assisted conversations",
+    title: "WhatsApp / AI Automation",
+    desc: "Backend and AI layer for WhatsApp-based booking and business conversations — the Fudur Automation direction.",
+    tone: "flame" as const,
   },
 ];
 
-function WorkVisual({ slug }: { slug: string }) {
+function WorkVisual({ slug, tone }: { slug: string; tone: "flame" | "dark" }) {
+  const nodeFill = tone === "flame" ? "#fff" : "#1d1712";
+  const lineStroke = tone === "flame" ? "rgba(255,255,255,0.55)" : "#3a332b";
+  const activeStroke = "#ffffff";
+  const labelFill = tone === "flame" ? "rgba(20,10,5,0.8)" : "#cfc7bd";
+
   if (slug === "tdis-logistics") {
     return (
       <svg viewBox="0 0 340 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <rect x="24" y="30" width="120" height="34" rx="3" className="flow-node" />
-        <text x="34" y="51" className="flow-label">BOOKING REQUEST</text>
-        <line x1="84" y1="64" x2="84" y2="104" className="flow-line" />
-        <rect x="24" y="104" width="120" height="34" rx="3" className="flow-node flow-node--accent" />
-        <text x="34" y="125" className="flow-label">AUTOMATION</text>
-        <line x1="84" y1="138" x2="84" y2="178" className="flow-line" />
-        <rect x="24" y="178" width="120" height="34" rx="3" className="flow-node" />
-        <text x="34" y="199" className="flow-label">TICKET / REPORT</text>
-        <line x1="144" y1="47" x2="220" y2="47" className="flow-line" />
-        <rect x="220" y="30" width="96" height="34" rx="3" className="flow-node" />
-        <text x="230" y="51" className="flow-label">WHATSAPP</text>
-        <line x1="144" y1="121" x2="220" y2="121" className="flow-line" />
-        <rect x="220" y="104" width="96" height="34" rx="3" className="flow-node" />
-        <text x="230" y="125" className="flow-label">AIRLINE OPS</text>
+        <rect x="24" y="30" width="120" height="34" rx="3" fill={nodeFill} stroke={lineStroke} />
+        <text x="34" y="51" fontFamily="JetBrains Mono, monospace" fontSize="9.5" fill={labelFill}>BOOKING REQUEST</text>
+        <line x1="84" y1="64" x2="84" y2="104" stroke={lineStroke} />
+        <rect x="24" y="104" width="120" height="34" rx="3" fill={nodeFill} stroke={activeStroke} strokeWidth="1.6" />
+        <text x="34" y="125" fontFamily="JetBrains Mono, monospace" fontSize="9.5" fill={labelFill}>AUTOMATION</text>
+        <line x1="84" y1="138" x2="84" y2="178" stroke={lineStroke} />
+        <rect x="24" y="178" width="120" height="34" rx="3" fill={nodeFill} stroke={lineStroke} />
+        <text x="34" y="199" fontFamily="JetBrains Mono, monospace" fontSize="9.5" fill={labelFill}>TICKET / REPORT</text>
+        <line x1="144" y1="47" x2="220" y2="47" stroke={lineStroke} />
+        <rect x="220" y="30" width="96" height="34" rx="3" fill={nodeFill} stroke={lineStroke} />
+        <text x="230" y="51" fontFamily="JetBrains Mono, monospace" fontSize="9.5" fill={labelFill}>WHATSAPP</text>
+        <line x1="144" y1="121" x2="220" y2="121" stroke={lineStroke} />
+        <rect x="220" y="104" width="96" height="34" rx="3" fill={nodeFill} stroke={lineStroke} />
+        <text x="230" y="125" fontFamily="JetBrains Mono, monospace" fontSize="9.5" fill={labelFill}>AIRLINE OPS</text>
       </svg>
     );
   }
   if (slug === "globetech") {
     return (
       <svg viewBox="0 0 340 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <rect x="140" y="20" width="110" height="34" rx="3" className="flow-node flow-node--accent" />
-        <text x="150" y="41" className="flow-label">APPLICANT</text>
-        <line x1="195" y1="54" x2="195" y2="94" className="flow-line" />
-        <rect x="140" y="94" width="110" height="34" rx="3" className="flow-node" />
-        <text x="150" y="115" className="flow-label">WORKFLOW</text>
-        <line x1="195" y1="128" x2="90" y2="168" className="flow-line" />
-        <line x1="195" y1="128" x2="300" y2="168" className="flow-line" />
-        <rect x="35" y="168" width="110" height="34" rx="3" className="flow-node" />
-        <text x="45" y="189" className="flow-label">STAFF REVIEW</text>
-        <rect x="245" y="168" width="110" height="34" rx="3" className="flow-node" />
-        <text x="255" y="189" className="flow-label" fontSize="8.5">DASHBOARD / KPI</text>
+        <rect x="140" y="20" width="110" height="34" rx="3" fill={nodeFill} stroke={activeStroke} strokeWidth="1.6" />
+        <text x="150" y="41" fontFamily="JetBrains Mono, monospace" fontSize="9.5" fill={labelFill}>APPLICANT</text>
+        <line x1="195" y1="54" x2="195" y2="94" stroke={lineStroke} />
+        <rect x="140" y="94" width="110" height="34" rx="3" fill={nodeFill} stroke={lineStroke} />
+        <text x="150" y="115" fontFamily="JetBrains Mono, monospace" fontSize="9.5" fill={labelFill}>WORKFLOW</text>
+        <line x1="195" y1="128" x2="90" y2="168" stroke={lineStroke} />
+        <line x1="195" y1="128" x2="300" y2="168" stroke={lineStroke} />
+        <rect x="35" y="168" width="110" height="34" rx="3" fill={nodeFill} stroke={lineStroke} />
+        <text x="45" y="189" fontFamily="JetBrains Mono, monospace" fontSize="9.5" fill={labelFill}>STAFF REVIEW</text>
+        <rect x="245" y="168" width="110" height="34" rx="3" fill={nodeFill} stroke={lineStroke} />
+        <text x="255" y="189" fontFamily="JetBrains Mono, monospace" fontSize="8.5" fill={labelFill}>DASHBOARD / KPI</text>
       </svg>
     );
   }
   return (
     <svg viewBox="0 0 340 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <rect x="20" y="112" width="80" height="34" rx="3" className="flow-node" />
-      <text x="28" y="133" className="flow-label">USER</text>
-      <line x1="100" y1="129" x2="140" y2="129" className="flow-line flow-line--active" />
-      <rect x="140" y="112" width="80" height="34" rx="3" className="flow-node flow-node--accent" />
-      <text x="148" y="133" className="flow-label">AI LAYER</text>
-      <line x1="220" y1="129" x2="260" y2="129" className="flow-line" />
-      <rect x="260" y="112" width="60" height="34" rx="3" className="flow-node" />
-      <text x="268" y="133" className="flow-label">API</text>
-      <line x1="180" y1="112" x2="180" y2="72" className="flow-line" />
-      <rect x="130" y="38" width="100" height="34" rx="3" className="flow-node" />
-      <text x="140" y="59" className="flow-label">BUSINESS LOGIC</text>
+      <rect x="20" y="112" width="80" height="34" rx="3" fill={nodeFill} stroke={lineStroke} />
+      <text x="28" y="133" fontFamily="JetBrains Mono, monospace" fontSize="9.5" fill={labelFill}>USER</text>
+      <line x1="100" y1="129" x2="140" y2="129" stroke={activeStroke} strokeDasharray="4 5" />
+      <rect x="140" y="112" width="80" height="34" rx="3" fill={nodeFill} stroke={activeStroke} strokeWidth="1.6" />
+      <text x="148" y="133" fontFamily="JetBrains Mono, monospace" fontSize="9.5" fill={labelFill}>AI LAYER</text>
+      <line x1="220" y1="129" x2="260" y2="129" stroke={lineStroke} />
+      <rect x="260" y="112" width="60" height="34" rx="3" fill={nodeFill} stroke={lineStroke} />
+      <text x="268" y="133" fontFamily="JetBrains Mono, monospace" fontSize="9.5" fill={labelFill}>API</text>
+      <line x1="180" y1="112" x2="180" y2="72" stroke={lineStroke} />
+      <rect x="130" y="38" width="100" height="34" rx="3" fill={nodeFill} stroke={lineStroke} />
+      <text x="140" y="59" fontFamily="JetBrains Mono, monospace" fontSize="9.5" fill={labelFill}>BUSINESS LOGIC</text>
     </svg>
   );
 }
@@ -89,7 +94,7 @@ export default function Work() {
       <div className="wrap">
         <div className="section-head">
           <div className="section-head__meta">
-            <span className="eyebrow">02 · Selected Work</span>
+            <span className="eyebrow eyebrow--pill">Selected Work</span>
             <h2 className="display-2">Three systems, three problems.</h2>
           </div>
           <p className="lede" style={{ margin: 0 }}>
@@ -97,24 +102,26 @@ export default function Work() {
           </p>
         </div>
 
-        <div className="work-list">
+        <div className="work-grid">
           {PROJECTS.map((project, i) => (
-            <Reveal key={project.slug} delay={i * 0.05}>
-              <Link href={`/work/${project.slug}`} className="work-item">
-                <span className="work-item__index">{project.index}</span>
-                <div className="work-item__body">
-                  <span className="work-item__role">{project.role}</span>
-                  <h3>{project.title}</h3>
-                  <p className="work-item__desc">{project.desc}</p>
-                  <div className="work-item__tags">
-                    {project.tags.map((tag) => (
-                      <span key={tag}>{tag}</span>
-                    ))}
-                  </div>
+            <Reveal key={project.slug} delay={i * 0.06}>
+              <Link href={`/work/${project.slug}`} className="work-card">
+                <div
+                  className="work-card__visual"
+                  style={{ background: project.tone === "flame" ? "var(--flame)" : "var(--invert-bg)" }}
+                >
+                  <WorkVisual slug={project.slug} tone={project.tone} />
                 </div>
-                <div className="work-item__visual">
-                  <WorkVisual slug={project.slug} />
-                  <span className="work-item__link" aria-hidden="true">↗</span>
+                <div className="work-card__body">
+                  <span className="work-card__tag">
+                    <span className="mono">{project.index}</span> {project.role}
+                  </span>
+                  <div className="work-card__title">{project.title}</div>
+                  <p className="work-card__desc">{project.desc}</p>
+                  <div className="work-card__foot">
+                    <span className="mono" style={{ color: "var(--ink-faint)" }}>View case study</span>
+                    <span className="work-card__link" aria-hidden="true">↗</span>
+                  </div>
                 </div>
               </Link>
             </Reveal>
