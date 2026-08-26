@@ -12,40 +12,36 @@ export default function Contact() {
             </h2>
             <p className="lede">
               If you&rsquo;re building a product, improving an operation, or trying to automate
-              something that shouldn&rsquo;t be manual — let&rsquo;s talk.
+              something that shouldn&rsquo;t be manual, let&rsquo;s talk.
             </p>
-            <a href="mailto:hello@example.com" className="btn btn--primary" style={{ marginTop: 30 }}>
+            <a href="mailto:muhammedabdulwahab77@gmail.com" className="btn btn--primary" style={{ marginTop: 30 }}>
               Email Muhammed <span className="btn__arrow" aria-hidden="true">→</span>
             </a>
           </Reveal>
           <Reveal delay={0.08}>
             <div className="contact__channels">
-              <a href="mailto:hello@example.com" className="contact__channel">
+              <a href="mailto:muhammedabdulwahab77@gmail.com" className="contact__channel">
                 <span>
                   <span className="contact__channel-label">EMAIL</span>
-                  <span className="contact__channel-value">hello@example.com</span>
+                  <span className="contact__channel-value">muhammedabdulwahab77@gmail.com</span>
                 </span>
                 <span aria-hidden="true">↗</span>
               </a>
-              <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" className="contact__channel">
+              <a href="https://www.linkedin.com/in/muhammed-abdulwahab-b89762154" target="_blank" rel="noopener noreferrer" className="contact__channel">
                 <span>
                   <span className="contact__channel-label">LINKEDIN</span>
                   <span className="contact__channel-value">/in/muhammed-abdulwahab</span>
                 </span>
                 <span aria-hidden="true">↗</span>
               </a>
-              <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="contact__channel">
+              <a href="https://github.com/mudone1" target="_blank" rel="noopener noreferrer" className="contact__channel">
                 <span>
                   <span className="contact__channel-label">GITHUB</span>
-                  <span className="contact__channel-value">github.com/[username]</span>
+                  <span className="contact__channel-value">github.com/mudone1</span>
                 </span>
                 <span aria-hidden="true">↗</span>
               </a>
             </div>
-            <p className="mono" style={{ color: "var(--ink-faint)", marginTop: 16, fontSize: 11.5 }}>
-              Placeholder contact details — replace email, LinkedIn and GitHub links with real ones
-              before launch. Add WhatsApp only if you want it listed publicly.
-            </p>
           </Reveal>
         </div>
       </div>

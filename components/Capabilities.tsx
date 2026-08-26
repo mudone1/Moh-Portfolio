@@ -4,31 +4,31 @@ const GROUPS = [
   {
     num: "01",
     title: "Build",
-    desc: "The application layer — full-stack products built to be maintained, not just demoed.",
+    desc: "The application layer. Full-stack products built to be maintained, not just demoed.",
     tags: ["Node.js", "TypeScript / JavaScript", "React & Next.js", ".NET"],
   },
   {
     num: "02",
     title: "Data",
-    desc: "Where the system remembers — modeled correctly so reporting and dashboards are simple.",
+    desc: "Where the system remembers, modeled properly so reporting and dashboards stay simple.",
     tags: ["PostgreSQL", "Supabase", "Database design", "Data workflows"],
   },
   {
     num: "03",
     title: "Automation",
-    desc: "Where the manual work disappears — APIs and workflows that replace repetitive coordination.",
+    desc: "Where the manual work disappears: APIs and workflows that replace repetitive coordination.",
     tags: ["API integrations", "Workflow automation", "WhatsApp automation", "Business process automation"],
   },
   {
     num: "04",
     title: "AI",
-    desc: "Where the system starts deciding — understanding requests and routing them correctly.",
+    desc: "Understanding requests and routing them correctly, within clearly defined rules.",
     tags: ["LLM integrations", "AI assistants", "Prompt engineering", "AI agents"],
   },
   {
     num: "05",
     title: "Product",
-    desc: "Where it all has to fit together — architecture, scope, and problem framing.",
+    desc: "Where it all has to fit together: architecture, scope, and problem framing.",
     tags: ["System architecture", "MVP development", "Business analysis", "Problem framing"],
   },
 ];
@@ -44,6 +44,10 @@ export default function Capabilities() {
               What I build, <span style={{ color: "var(--flame)" }}>for your business.</span>
             </h2>
           </div>
+          <p className="lede" style={{ margin: 0 }}>
+            Technologies and disciplines used to build systems, not a claim of mastering all of
+            them equally.
+          </p>
         </div>
 
         <div>

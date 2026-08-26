@@ -5,7 +5,7 @@ import CaseStudyBlock from "@/components/CaseStudyBlock";
 export const metadata: Metadata = {
   title: "TDIS Logistics — Case Study",
   description:
-    "How Muhammed Abdulwahab built automation and reporting systems around airline ticketing, travel operations, and WhatsApp workflows for TDIS Logistics.",
+    "How Muhammed Abdulwahab built operational software around a real travel and ticketing business: automation, reporting, and WhatsApp-based workflows for TDIS Logistics.",
 };
 
 export default function TdisLogisticsPage() {
@@ -13,55 +13,59 @@ export default function TdisLogisticsPage() {
     <CaseStudyShell
       eyebrow="Case Study 01"
       title="TDIS Logistics"
-      lede="Systems and automation built around airline ticketing, travel operations, and the WhatsApp conversations that used to hold the whole process together manually."
+      lede="Operational software built around a real travel and ticketing business, turning manual booking, balance-checking, and reporting work into structured systems."
       meta={[
-        { k: "Domain", v: "Travel & logistics operations" },
+        { k: "Domain", v: "Travel & ticketing operations" },
         { k: "Focus", v: "Automation, workflow tooling, reporting" },
         { k: "Role", v: "Systems & automation build" },
       ]}
       nextHref="/work/globetech"
-      nextTitle="GlobeTech — Grant Platform"
+      nextTitle="GlobeTech — Application Platform"
     >
       <CaseStudyBlock num="01" title="The Problem">
         <p>
-          Ticketing and travel operations at TDIS ran through a mix of manual coordination — much of
-          it over WhatsApp, message by message, between staff, customers, and airline processes. Every
-          booking meant someone re-typing the same details, chasing confirmations, and manually
-          pulling together reports on what had actually happened.
+          Ticketing and travel operations at TDIS ran through a mix of manual coordination, much of
+          it over WhatsApp, message by message, between staff, customers, and airline processes.
+          Checking an airline wallet balance meant logging into a portal by hand. Every booking
+          meant re-typing the same details, chasing confirmations, and pulling together reports
+          after the fact rather than as the work happened.
         </p>
         <p>
-          The process worked, but it didn&rsquo;t scale, and it didn&rsquo;t leave behind the
-          reporting an operations team needs to see what&rsquo;s actually going on across a day, a
-          week, or a route.
+          None of it was broken exactly. It just didn&rsquo;t scale, and it left the operations team
+          without real visibility into balances, ticket availability, deposits, and outstanding
+          debt across the business.
         </p>
       </CaseStudyBlock>
 
-      <CaseStudyBlock num="02" title="The Thinking" raised>
+      <CaseStudyBlock num="02" title="The Approach" raised>
         <p>
-          The starting point wasn&rsquo;t &ldquo;what software should we build&rdquo; — it was mapping
-          how a booking actually moved from a customer&rsquo;s first message to a confirmed ticket, and
-          where in that path a human was doing something a system could do instead.
+          The starting point was mapping how a booking actually moved from a customer&rsquo;s first
+          message to a confirmed ticket, and where in that path a person was doing something a
+          system could do instead, or at least track properly.
         </p>
         <p>
-          WhatsApp stayed the front door, because that&rsquo;s where the operation already lived —
-          customers and staff weren&rsquo;t going to switch channels. The goal was to structure what
-          happened behind that door: turn a loose conversation into a tracked workflow with a clear
-          status, without making the experience feel like a form.
+          WhatsApp stayed the front door, because that&rsquo;s where the operation already lived.
+          Behind it, the goal was to centralize what had been scattered across chats, spreadsheets,
+          and separate airline portals into one operational dashboard, and to automate the checks
+          that used to require someone logging into an airline account by hand.
         </p>
       </CaseStudyBlock>
 
       <CaseStudyBlock num="03" title="The System">
         <p>
-          The result is a set of connected tools rather than one monolithic app: automated handling of
-          WhatsApp-based booking requests, structured workflows for airline-related processes, and
-          reporting that gives operations visibility without manual data entry at the end of the day.
+          The result is a modular travel-operations dashboard alongside a separate automation
+          service, rather than one monolithic app:
         </p>
         <ul>
-          <li>WhatsApp-based workflow automation for booking and follow-up</li>
-          <li>Structured handling of airline-related ticketing processes</li>
-          <li>Operational reporting built from workflow data, not manual logs</li>
-          <li>Tooling to reduce repetitive coordination between staff and customers</li>
+          <li>An operational dashboard centralizing airline wallet balances, ticket availability, client records, deposits, and debt tracking</li>
+          <li>A dedicated WhatsApp automation service for booking-related workflows</li>
+          <li>A separate Node.js connector service that signs into airline B2B portals to synchronize wallet balances automatically, with encrypted credential storage, retry handling, and scheduled runs</li>
+          <li>A componentized, typed frontend replacing what was originally a large single-file application</li>
         </ul>
+        <p>
+          The airline-connector piece is still evolving; not every airline integration is finished
+          to the same degree, and it was built to be extended rather than closed.
+        </p>
       </CaseStudyBlock>
 
       <CaseStudyBlock num="04" title="Architecture" raised>
@@ -86,30 +90,25 @@ export default function TdisLogisticsPage() {
         </div>
       </CaseStudyBlock>
 
-      <CaseStudyBlock num="05" title="Screens">
-        <div className="placeholder-shot">
-          Screenshot placeholder — add product screenshots of the booking workflow and reporting views here.
-        </div>
-      </CaseStudyBlock>
-
-      <CaseStudyBlock num="06" title="The Result" raised>
-        <p>
-          Booking and ticketing coordination now runs through structured, repeatable workflows instead
-          of ad-hoc messaging, with reporting generated from the workflow itself rather than assembled
-          by hand afterward. No fabricated figures here — if you&rsquo;d like specific outcomes
-          included, add them once confirmed.
-        </p>
-      </CaseStudyBlock>
-
-      <CaseStudyBlock num="07" title="Technology">
+      <CaseStudyBlock num="05" title="Technology">
         <div className="tech-tags">
-          <span className="tag">Node.js</span>
+          <span className="tag">Next.js</span>
           <span className="tag">TypeScript</span>
-          <span className="tag">WhatsApp APIs</span>
-          <span className="tag">REST APIs</span>
-          <span className="tag">Automation</span>
           <span className="tag">PostgreSQL</span>
+          <span className="tag">Firestore</span>
+          <span className="tag">Node.js</span>
+          <span className="tag">Playwright</span>
+          <span className="tag">WhatsApp APIs</span>
         </div>
+      </CaseStudyBlock>
+
+      <CaseStudyBlock num="06" title="Outcome" raised>
+        <p>
+          Booking and balance-checking now run through structured, repeatable workflows instead of
+          manual coordination across chats and portals, with reporting generated from the system
+          itself rather than assembled by hand. This is software built around a real operating
+          business, not a demo. That&rsquo;s the part worth taking from it.
+        </p>
       </CaseStudyBlock>
     </CaseStudyShell>
   );

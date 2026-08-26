@@ -5,7 +5,7 @@
 /* ==========================================================================
    Muhammed Abdulwahab — Portfolio
    Bold editorial system: warm flame orange/red + near-black + cream.
-   Display: Recursive (variable, animated) · Body: Inter · Mono: JetBrains Mono
+   Display: Bodoni Moda (variable, luxury serif) · Body: Inter · Mono: JetBrains Mono
    ========================================================================== */
 
 :root {
@@ -26,7 +26,7 @@
   --invert-ink: #ffffff;
   --invert-line: #332a22;
 
-  --font-display: "Recursive", "Inter", sans-serif;
+  --font-display: "Bodoni Moda", "Georgia", serif;
   --font-body: "Inter", -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
@@ -136,43 +136,43 @@ button { font: inherit; cursor: pointer; }
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   margin: 0;
   color: var(--ink);
-  font-variation-settings: "MONO" 0, "CASL" 0.15, "wght" 700, "slnt" 0;
+  font-variation-settings: "opsz" 60;
 }
 
 .display-1 {
   font-size: clamp(48px, 8vw, 108px);
-  line-height: 0.95;
-  letter-spacing: -0.03em;
-  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.015em;
+  font-weight: 650;
 }
 .display-2 {
   font-size: clamp(32px, 4.8vw, 60px);
-  line-height: 1.02;
-  letter-spacing: -0.025em;
-  font-weight: 750;
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  font-weight: 600;
 }
 .display-3 {
   font-size: clamp(22px, 2.6vw, 32px);
-  line-height: 1.15;
+  line-height: 1.18;
 }
 
 .headline-anim {
-  transition: font-variation-settings 1.6s var(--ease), opacity 0.9s var(--ease), transform 0.9s var(--ease);
-  font-variation-settings: "MONO" 0, "CASL" 1, "wght" 500, "slnt" -3;
+  transition: font-variation-settings 1.4s var(--ease), opacity 0.9s var(--ease), transform 0.9s var(--ease);
+  font-variation-settings: "opsz" 10, "wght" 420;
   opacity: 0;
   transform: translateY(14px);
 }
 .headline-anim.is-loaded {
-  font-variation-settings: "MONO" 0.35, "CASL" 0, "wght" 800, "slnt" 0;
+  font-variation-settings: "opsz" 60, "wght" 600;
   opacity: 1;
   transform: translateY(0);
 }
 .headline-anim:hover {
-  font-variation-settings: "MONO" 0.7, "CASL" 0, "wght" 800, "slnt" 0;
+  font-variation-settings: "opsz" 90, "wght" 650;
 }
 
 .lede {
@@ -242,7 +242,7 @@ h1, h2, h3, h4 {
 .nav.is-scrolled .nav__inner { padding-top: 16px; padding-bottom: 16px; }
 
 .nav__name {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 15px;
   font-weight: 700;
   letter-spacing: -0.01em;
@@ -438,14 +438,15 @@ h1, h2, h3, h4 {
 }
 .hero__name-bg span {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 500;
   font-size: clamp(64px, 15vw, 220px);
-  line-height: 0.86;
-  letter-spacing: -0.04em;
+  line-height: 0.9;
+  letter-spacing: 0;
   color: var(--flame-dark);
   opacity: 0.55;
   text-transform: uppercase;
   white-space: nowrap;
+  font-variation-settings: "opsz" 90;
 }
 
 .hero__portrait {
@@ -469,10 +470,10 @@ h1, h2, h3, h4 {
 }
 .hero__firstname-inner {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 600;
   font-size: clamp(48px, 11vw, 150px);
-  line-height: 0.86;
-  letter-spacing: -0.03em;
+  line-height: 0.9;
+  letter-spacing: 0;
   color: #fff;
   text-transform: uppercase;
 }
@@ -508,7 +509,7 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
-.hero__floating-card-title { font-family: var(--font-display); font-weight: 700; font-size: 15px; margin-bottom: 2px; }
+.hero__floating-card-title { font-family: var(--font-body); font-weight: 700; font-size: 15px; margin-bottom: 2px; }
 .hero__floating-card-sub { font-family: var(--font-mono); font-size: 11px; color: #a9a29a; }
 .hero__floating-card-link {
   width: 30px; height: 30px;
@@ -851,7 +852,7 @@ h1, h2, h3, h4 {
   background: none;
   border: none;
   text-align: left;
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-weight: 650;
   font-size: 15.5px;
   color: var(--ink);
@@ -894,7 +895,7 @@ h1, h2, h3, h4 {
 
 .footer { border-top: 1px solid var(--line); padding: 44px 0; }
 .footer__inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
-.footer__name { font-family: var(--font-display); font-weight: 700; font-size: 15px; }
+.footer__name { font-family: var(--font-body); font-weight: 700; font-size: 15px; }
 .footer__role { font-family: var(--font-mono); font-size: 12px; color: var(--ink-faint); margin-top: 4px; }
 .footer__links { display: flex; gap: 26px; }
 .footer__links a { font-family: var(--font-mono); font-size: 12.5px; color: var(--ink-soft); }
@@ -935,12 +936,6 @@ h1, h2, h3, h4 {
 .arch-diagram .flow-node--accent { stroke: var(--flame); }
 .arch-diagram .flow-dot { fill: var(--flame); }
 .arch-diagram .flow-label { fill: var(--ink-soft); }
-
-.placeholder-shot {
-  border: 1px dashed var(--line-strong); border-radius: var(--radius); background: var(--bg-raised);
-  aspect-ratio: 16/10; display: flex; align-items: center; justify-content: center; flex-direction: column;
-  gap: 8px; color: var(--ink-faint); font-family: var(--font-mono); font-size: 12.5px; text-align: center; padding: 20px;
-}
 
 .tech-tags { display: flex; flex-wrap: wrap; gap: 10px; }
 

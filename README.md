@@ -1,21 +1,27 @@
 # Muhammed Abdulwahab — Portfolio (Next.js)
 
 A Next.js 14 (App Router) + TypeScript + Tailwind CSS project. Bold, editorial
-design system — warm flame orange/red, near-black, and cream — inspired by a
-reference the client shared, adapted to the "systems builder" positioning:
-a giant name treatment behind a portrait cutout in the hero, numbered service
-rows, color-tile project cards, a bento-style highlights grid, an editorial
-photo strip in About, and an FAQ accordion. Framer Motion drives scroll
+design system — warm flame orange/red, near-black, and cream — with a giant
+name treatment behind a portrait cutout in the hero, numbered service rows,
+color-tile project cards, a bento-style highlights grid, an editorial photo
+strip in About, and a working FAQ accordion. Framer Motion drives scroll
 reveals and the FAQ; the hero keeps its animated "live pipeline" system-trace
-diagram as a signature detail.
+diagram as a signature detail. Display type is **Bodoni Moda**, a free,
+commercially-licensed variable luxury serif (Google Fonts).
+
+This revision is a content-accuracy pass over the previous version: every
+placeholder, fake repo card, and unverified claim has been replaced with real
+information, and the copy has been rewritten throughout for tone.
 
 ## A note on how this was built
 
 This project was generated in a sandboxed environment with no access to the
 npm registry, so `npm install` and `next build` could not be run or verified
 here. The code follows standard, current Next.js/TypeScript/Tailwind
-conventions throughout, but **run a full install and build yourself before
-deploying** — see "First run" below.
+conventions throughout, and every file has been manually reviewed (brace
+balance, import resolution, internal route/link resolution, image references)
+but **run a full install and build yourself before deploying** — see
+"First run" below.
 
 ## First run
 
@@ -71,7 +77,8 @@ components/
 public/
   muhammed-cutout.png             Background-removed portrait for the hero
   muhammed-abdulwahab.jpg         Original rectangular photo (used in About gallery)
-  resume.pdf                      ← add this yourself (see below)
+  resume.pdf                      Real resume, already wired into the Resume section
+  og-cover.png                    Generated Open Graph / social-preview image
 ```
 
 ## Design system
@@ -80,37 +87,65 @@ public/
   `--flame` / `--flame-dark` / `--flame-light` / `--flame-soft` for the
   orange-red accent, `--bg` / `--bg-raised` for the cream base, `--invert-bg`
   for near-black cards/sections.
-- Fonts: **Recursive** (variable, animated) for display/headings, **Inter**
-  for body copy, **JetBrains Mono** for labels, tags, and metadata.
+- Fonts: **Bodoni Moda** (variable luxury serif, free/commercial via Google
+  Fonts) for display/headings, **Inter** for body copy and small UI chrome
+  (nav, footer, FAQ questions — kept sans-serif at small sizes since a
+  Didone serif's thin hairlines get illegible below ~20px), **JetBrains
+  Mono** for labels, tags, and metadata.
 - Motion: scroll reveals and the FAQ accordion use Framer Motion; the hero's
-  giant firstname animates its variable-font axes on load; a flame-colored
-  cursor dot follows the pointer. The hero's "live pipeline" system-trace
-  diagram (the animated node flow) is the one motion element carried over
-  from the previous monochrome version by request. Everything checks
-  `prefers-reduced-motion` and simplifies or disables accordingly.
-- **No fabricated content.** The bento highlights, FAQ, and all copy stick to
-  real, verifiable facts (project names, stated focus areas, stated
-  availability) — no invented client counts, revenue, testimonials, or
-  awards, even though the visual reference included some of those sections.
+  giant firstname animates Bodoni Moda's optical-size/weight axes on load; a
+  flame-colored cursor dot follows the pointer. The hero's "live pipeline"
+  system-trace diagram (the animated node flow) is a signature detail kept
+  by request across redesigns. Everything checks `prefers-reduced-motion`
+  and simplifies or disables accordingly.
+- **No fabricated content.** All copy, the GitHub repo cards, and the bento
+  highlights stick to real, verifiable facts (actual repo names/descriptions
+  pulled from each project's README, stated focus areas, stated
+  availability). No invented client counts, revenue, stars, testimonials,
+  or awards.
+
+## Fonts: licensing note
+
+Three sets of display fonts were explored during this project (Lenia Sans /
+Corify / Luxurio previews, then Before Modern / Casko Luxury / Modern
+Heritage demo files). The demo font files that were uploaded are explicitly
+licensed **personal use only, no commercial use** — they are not included or
+referenced anywhere in this codebase. The site uses **Bodoni Moda** instead,
+which has the same luxury-serif character and is free for commercial use
+(SIL Open Font License, served via Google Fonts). If you own commercial
+licenses for Lenia Sans, Corify, or any of the other previewed fonts, they
+can be swapped in via the `@font-face`/Google Fonts `<link>` in
+`app/layout.tsx` and the `--font-display` variable in `app/globals.css`.
 
 ## The hero portrait
 
-`public/muhammed-cutout.png` was background-removed from your uploaded photo
-using a flood-fill + soft geometric fade (no external tool/API — this was
-done locally in the sandbox). It reads as a clean "bust fading into color"
-treatment rather than a pixel-perfect die-cut silhouette, since the shirt
-was too close in tone to the background for a fully clean cutout. If you
-have (or can generate) a proper cutout with a transparent background later,
-just swap the file — same filename, same dimensions expected (~1103×1078).
+`public/muhammed-cutout.png` was background-removed from the uploaded photo
+using a flood-fill + soft geometric fade (no external tool/API — done
+locally). It reads as a clean "bust fading into color" treatment rather than
+a pixel-perfect die-cut silhouette, since the shirt was too close in tone to
+the original background for a fully clean cutout. Swap the file for a
+proper transparent-background cutout later if you get one (same filename,
+same dimensions expected, ~1103×1078).
 
-## Before you publish — replace these placeholders
+## Real content — nothing left to fill in
 
-- **Contact info** — email, LinkedIn URL, GitHub profile URL in
-  `components/Nav.tsx`, `components/Footer.tsx`, `components/Contact.tsx`,
-  and `components/GithubSection.tsx`
-- **GitHub repos** — the three placeholder cards in `components/GithubSection.tsx`
-- **Experience dates** — `components/Experience.tsx`
-- **`public/resume.pdf`** — add the real file
-- **Case study screenshots** — the "Screenshot placeholder" blocks in each
-  `app/work/*/page.tsx` file
-- **`og-cover.png`** — a 1200×630 social preview image (optional)
+Every placeholder from earlier drafts has been replaced:
+
+- Contact details (`components/Contact.tsx`, `Footer.tsx`, `Nav.tsx`,
+  `GithubSection.tsx`) use the real email, LinkedIn, and GitHub profile.
+- The three GitHub repo cards show the real repositories (`Tdislogistics`,
+  `Globe-Tech`, `fudur`) with descriptions grounded in each repo's actual
+  README — no fabricated stars or invented descriptions.
+- `public/resume.pdf` is the real, generated resume — the Resume section's
+  buttons work.
+- Experience entries use real roles and organizations; unknown employment
+  dates are omitted entirely rather than shown as placeholders.
+- `metadataBase` points at the real deployed URL
+  (`https://moh-portfolio-seven.vercel.app`).
+
+If you want to double-check anything before sending this to a recruiter, the
+one item genuinely worth a second look is the **functional titles** used for
+the TDIS and One Acre Fund Nigeria roles in `components/Experience.tsx`
+("Systems & Automation", "Business Development & Operations") — these are
+descriptive, not necessarily your official job titles. Swap in the real
+ones if they differ.

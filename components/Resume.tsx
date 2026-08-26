@@ -9,7 +9,7 @@ export default function Resume() {
             <div className="resume-panel__left">
               <span className="eyebrow eyebrow--pill" style={{ marginBottom: 14 }}>Resume</span>
               <h3>The short version, on paper.</h3>
-              <p>Role, tools, and the systems behind them — for anyone who needs it in a single file.</p>
+              <p>Role, tools, and the systems behind them, in a single file.</p>
             </div>
             <div className="resume-panel__actions">
               <a href="/resume.pdf" className="btn btn--primary" download>
@@ -21,9 +21,6 @@ export default function Resume() {
             </div>
           </div>
         </Reveal>
-        <p className="mono" style={{ color: "var(--ink-faint)", marginTop: 16 }}>
-          Placeholder link — add resume.pdf to /public before deploying.
-        </p>
       </div>
     </section>
   );

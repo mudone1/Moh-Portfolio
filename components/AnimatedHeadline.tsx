@@ -3,12 +3,13 @@
 import { useEffect, useRef } from "react";
 
 /**
- * Signature font animation: the headline "materialises" from a casual,
- * humanist letterform into a systemised, semi-monospace one on load —
- * business language becoming code — using the Recursive variable font's
- * MONO/CASL/weight axes. Hovering nudges it further toward MONO.
- * A single CSS transition; skipped entirely for reduced-motion users
- * via the .headline-anim base state already being fully legible.
+ * Signature font animation: the headline "materialises" on load using
+ * Bodoni Moda's variable optical-size and weight axes, moving from a
+ * lighter, smaller-optical-size cut into the full display cut. Hovering
+ * nudges it further toward the bold display weight.
+ * A single CSS transition; the base state is already fully legible for
+ * reduced-motion users (the transition itself is skipped via prefers-
+ * reduced-motion in globals.css).
  */
 export default function AnimatedHeadline({
   as = "h1",

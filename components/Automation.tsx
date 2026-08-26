@@ -1,13 +1,14 @@
 import Reveal from "./Reveal";
 
 const CAPS = [
-  "Understand requests, in natural language",
-  "Trigger the right workflow automatically",
-  "Communicate with customers directly",
-  "Connect the APIs a business already runs on",
-  "Process information and route it correctly",
-  "Make decisions within clearly defined rules",
-  "Remove repetitive operational work",
+  "Understand requests",
+  "Trigger workflows",
+  "Communicate with customers",
+  "Connect APIs",
+  "Process information",
+  "Route tasks",
+  "Apply predefined business rules and AI-assisted logic",
+  "Reduce repetitive operational work",
 ];
 
 export default function Automation() {
@@ -26,14 +27,14 @@ export default function Automation() {
               The next layer of software is automated.
             </h2>
             <p className="lede" style={{ maxWidth: "52ch" }}>
-              Most software still waits for someone to click a button. Muhammed is interested in the
-              layer above that — systems that understand a request, trigger the right workflow, and
-              complete it without a human relaying every step in between.
+              Most business software still requires people to manually move information from one
+              place to another. Muhammed is interested in building systems where AI, APIs, and
+              business rules work together to handle more of that coordination automatically.
             </p>
             <div className="fudur-note">
-              This direction is what Muhammed is building toward through <strong>Fudur Automation</strong> —
-              turning repetitive business processes into automated systems that connect AI, APIs, and real
-              operational workflows.
+              This is the direction behind <strong>Fudur Automation</strong>, a platform Muhammed is
+              currently building to turn repetitive business processes into reusable AI-powered
+              workflows.
             </div>
           </Reveal>
           <Reveal delay={0.08}>

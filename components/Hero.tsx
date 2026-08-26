@@ -12,7 +12,7 @@ export default function Hero() {
             <span className="status-pill__dot" aria-hidden="true" />
             Available for remote opportunities
           </div>
-          <p className="mono" style={{ color: "rgba(255,255,255,0.75)" }}>©2026 — Systems Builder</p>
+          <p className="mono" style={{ color: "rgba(255,255,255,0.75)" }}>©{new Date().getFullYear()} — Systems Builder</p>
         </div>
 
         <div className="hero__stage">
@@ -27,7 +27,7 @@ export default function Hero() {
           <div
             className="hero__floating-card hero__floating-card--pipeline"
             role="img"
-            aria-label="Diagram showing a business problem flowing through automation, AI, and an API into a working product — the live pipeline"
+            aria-label="Diagram showing a business problem flowing through automation, AI, and an API into a working product: the live pipeline"
           >
             <div className="hero__floating-card-label">
               <span>system_trace.svg</span>
@@ -101,8 +101,8 @@ export default function Hero() {
         <div className="hero__foot">
           <div className="hero__foot-copy">
             <p>
-              I design and build AI automation, backend systems, and integrations for teams done
-              running their operations by hand.
+              I design and build AI automation, backend systems, and integrations for teams tired
+              of running their operations by hand.
             </p>
           </div>
           <div className="hero__foot-actions">

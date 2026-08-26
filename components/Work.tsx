@@ -5,25 +5,25 @@ const PROJECTS = [
   {
     index: "01",
     slug: "tdis-logistics",
-    role: "Travel & ticketing · Automation",
+    role: "Travel & Ticketing · Automation",
     title: "TDIS Logistics",
-    desc: "Automation and reporting systems built around airline ticketing, travel operations, and WhatsApp-based workflows.",
+    desc: "Operational software built around a real travel and ticketing business: automation, reporting, and WhatsApp-based processes that replaced repetitive manual coordination.",
     tone: "flame" as const,
   },
   {
     index: "02",
     slug: "globetech",
-    role: "Application & grant platform",
+    role: "Application Platform · Workflow Automation",
     title: "GlobeTech",
-    desc: "A functioning operational platform for application workflows, referrals, staff hierarchy, and dashboards.",
+    desc: "An operational platform for application workflows, referrals, staff hierarchy, and administrative dashboards, designed around the process being run, not just a website presenting it.",
     tone: "dark" as const,
   },
   {
     index: "03",
     slug: "whatsapp-ai-automation",
-    role: "AI-assisted conversations",
+    role: "AI Automation · WhatsApp · Backend Systems",
     title: "WhatsApp / AI Automation",
-    desc: "Backend and AI layer for WhatsApp-based booking and business conversations — the Fudur Automation direction.",
+    desc: "AI-assisted conversation handling and backend logic for WhatsApp-based bookings and business workflows, the foundation for Fudur Automation.",
     tone: "flame" as const,
   },
 ];
@@ -98,7 +98,7 @@ export default function Work() {
             <h2 className="display-2">Three systems, three problems.</h2>
           </div>
           <p className="lede" style={{ margin: 0 }}>
-            Not a portfolio of demos — a record of software built to run real operations.
+            Not a portfolio of demos. A record of software built to run real operations.
           </p>
         </div>
 

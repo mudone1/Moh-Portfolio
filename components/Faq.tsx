@@ -6,23 +6,23 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 const ITEMS = [
   {
     q: "What kind of problems are the best fit?",
-    a: "Anything where a business process is still running through manual coordination — spreadsheets, repeated WhatsApp messages, staff re-typing the same information more than once. If a workflow can be mapped, it can usually be automated or turned into software.",
+    a: "Repetitive operational workflows: manual coordination, WhatsApp-based processes, dashboards, integrations, and business processes that can reasonably be automated. If a workflow can be mapped, it can usually be turned into software.",
   },
   {
     q: "Do you work on the full stack, or just automation?",
-    a: "Both, depending on what the problem needs. Some projects are pure automation and API work; others need a full application — frontend, backend, and the database underneath it. The starting point is always the workflow, not the tech stack.",
+    a: "Both. Automation is one of my strongest areas, but I work across the stack when the problem requires it, from frontend interfaces and backend services to databases, APIs, and workflow logic.",
   },
   {
     q: "Do you use AI coding tools like Claude Code?",
-    a: "Yes, actively — as an engineering accelerator. Architecture, product decisions, system design, and testing stay under direct ownership; AI tools speed up implementation, they don't replace the thinking around it.",
+    a: "Yes. I use AI coding tools as part of my development workflow, but I don't treat them as a substitute for engineering judgment. I use them to accelerate implementation while I remain responsible for architecture, system design, debugging, testing, integrations, and the business logic being built.",
   },
   {
     q: "Are you available for remote work?",
-    a: "Yes — currently available for remote opportunities, contract or full-time. See the Contact section below to get in touch.",
+    a: "Yes. I'm currently open to remote opportunities, particularly roles involving AI automation, backend or full-stack development, integrations, and systems engineering.",
   },
   {
     q: "What does a typical engagement look like?",
-    a: "Understand the problem and map the current workflow first, then design the system, build it in stages, and test against real usage rather than a demo scenario. The exact shape depends on scope — worth a conversation.",
+    a: "It starts with the problem rather than the technology. I first understand the workflow, identify the bottleneck, design the appropriate system, then build and iterate based on real usage.",
   },
 ];
 

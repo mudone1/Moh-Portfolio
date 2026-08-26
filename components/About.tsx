@@ -10,7 +10,7 @@ export default function About() {
             <span className="eyebrow eyebrow--pill">About</span>
             <h2 className="display-2">The problem comes first.</h2>
           </div>
-          <p className="mono" style={{ color: "var(--ink-faint)" }}>©2026 — Scroll to explore</p>
+          <p className="mono" style={{ color: "var(--ink-faint)" }}>©{new Date().getFullYear()} — Scroll to explore</p>
         </div>
 
         <Reveal>
@@ -68,21 +68,21 @@ export default function About() {
           </Reveal>
           <Reveal className="intro__body" delay={0.08}>
             <p>
-              Muhammed Abdulwahab works at the intersection of business operations and software.
-              Before he was writing production code, he was thinking in workflows — where time gets
-              lost, where a process breaks down between departments, where a WhatsApp message turns
-              into three days of manual follow-up.
+              Muhammed approaches software from a business and problem-solving perspective. Before
+              writing code, he wants to understand how a process actually works: where people lose
+              time, where information gets lost between people, and what can reasonably be
+              automated.
             </p>
             <p>
-              That background shapes how he builds. Technology, for him, isn&rsquo;t the starting
-              point — it&rsquo;s the tool he reaches for once the problem is actually understood. He
-              combines business thinking, analytical reasoning, and full-stack engineering to design
-              systems that hold up in production, not just in a demo.
+              That background, in business development, operations, and analytical
+              problem-solving, shapes how he builds. He moved from there into full-stack
+              development and automation, building real systems around travel operations,
+              application platforms, dashboards, WhatsApp workflows, and AI-assisted business
+              processes.
             </p>
             <p>
-              He has built and maintained real systems for travel and logistics operations,
-              application and grant platforms, and AI-assisted customer workflows on WhatsApp —
-              software that people use, not portfolio pieces.
+              He doesn&rsquo;t build software to prove he can code. He builds it because something
+              needed to work better.
             </p>
             <div className="intro__tags">
               <span className="tag tag--flame">Business thinking</span>

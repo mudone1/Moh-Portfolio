@@ -9,15 +9,15 @@ export default function Highlights() {
             <div className="bento-cell bento-cell--flame bento-cell--wide">
               <span className="bento-cell__label">Selected work</span>
               <div>
-                <div className="bento-cell__value">3 systems, shipped and running</div>
+                <div className="bento-cell__value">3 systems, built for real operations</div>
               </div>
             </div>
 
             <div className="bento-cell">
               <span className="bento-cell__label">Status</span>
               <div>
-                <div className="bento-cell__value">Remote-ready</div>
-                <p className="bento-cell__note">Available now</p>
+                <div className="bento-cell__value">Open to opportunities</div>
+                <p className="bento-cell__note">Remote-ready</p>
               </div>
             </div>
 
@@ -30,10 +30,10 @@ export default function Highlights() {
             </div>
 
             <div className="bento-cell bento-cell--wide">
-              <span className="bento-cell__label">Building</span>
+              <span className="bento-cell__label">Currently building</span>
               <div>
                 <div className="bento-cell__value">Fudur Automation</div>
-                <p className="bento-cell__note">Turning repetitive business processes into automated systems.</p>
+                <p className="bento-cell__note">Turning repetitive business processes into AI-powered workflows.</p>
               </div>
             </div>
 

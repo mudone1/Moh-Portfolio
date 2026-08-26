@@ -1,13 +1,13 @@
 import Reveal from "./Reveal";
 
 const STEPS = [
-  { num: "01", title: "Understand the problem", desc: "Before any code, the actual bottleneck: who's doing what manually, and why it hurts." },
-  { num: "02", title: "Map the workflow", desc: "Every step a task actually takes today — not the version described in a meeting." },
-  { num: "03", title: "Design the system", desc: "Architecture that fits the workflow, not a workflow forced onto someone else's template." },
-  { num: "04", title: "Automate the repetitive parts", desc: "Anything done the same way twice becomes a candidate for automation, not a permanent chore." },
-  { num: "05", title: "Build", desc: "Working software, shipped in stages — not a single all-or-nothing release." },
-  { num: "06", title: "Test", desc: "Against how the system is actually used, including the edge cases people don't mention upfront." },
-  { num: "07", title: "Improve", desc: "Systems keep changing shape once real usage starts. So does the software behind them." },
+  { num: "01", title: "Understand the problem", desc: "Before writing code, understand what is actually slowing the business down." },
+  { num: "02", title: "Map the workflow", desc: "Understand what people do today, including the messy parts that don't appear in documentation." },
+  { num: "03", title: "Design the system", desc: "Design software around the real workflow, rather than forcing the business into a generic template." },
+  { num: "04", title: "Automate the repetitive parts", desc: "Identify the work that can be handled consistently by software." },
+  { num: "05", title: "Build", desc: "Ship working software in stages, not one all-or-nothing release." },
+  { num: "06", title: "Test", desc: "Test against real usage and the edge cases people don't mention upfront." },
+  { num: "07", title: "Improve", desc: "Use real-world feedback to keep improving the system." },
 ];
 
 export default function Process() {

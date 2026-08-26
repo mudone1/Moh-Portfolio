@@ -3,20 +3,20 @@ import CaseStudyShell from "@/components/CaseStudyShell";
 import CaseStudyBlock from "@/components/CaseStudyBlock";
 
 export const metadata: Metadata = {
-  title: "WhatsApp / AI Automation Platform — Case Study",
+  title: "WhatsApp / AI Automation — Case Study",
   description:
-    "How Muhammed Abdulwahab built an AI-assisted WhatsApp automation platform for business conversations and booking workflows.",
+    "How Muhammed Abdulwahab built AI-assisted WhatsApp automation for business conversations and booking workflows, the foundation for Fudur Automation.",
 };
 
 export default function WhatsappAiAutomationPage() {
   return (
     <CaseStudyShell
       eyebrow="Case Study 03"
-      title="WhatsApp / AI Automation Platform"
-      lede="AI-assisted conversations, backend workflows, and booking automation on WhatsApp — the clearest signal of where Muhammed's work is heading through Fudur Automation."
+      title="WhatsApp / AI Automation"
+      lede="AI-assisted conversation handling and backend logic for WhatsApp-based bookings and business workflows, the direction Muhammed's work is heading through Fudur Automation."
       meta={[
-        { k: "Domain", v: "AI automation platform" },
-        { k: "Focus", v: "AI agents, WhatsApp API, booking workflows" },
+        { k: "Domain", v: "AI automation, backend systems" },
+        { k: "Focus", v: "WhatsApp API, AI/LLM integration, booking workflows" },
         { k: "Role", v: "Backend & AI layer build" },
       ]}
       nextHref="/#work"
@@ -24,34 +24,40 @@ export default function WhatsappAiAutomationPage() {
     >
       <CaseStudyBlock num="01" title="The Problem">
         <p>
-          Business conversations on WhatsApp — bookings, questions, follow-ups — mostly still require a
-          person on the other end, reading, deciding, and typing a reply. That doesn&rsquo;t scale past
-          a certain volume, and it means the business is only ever as fast as whoever is available to
-          answer.
+          Business conversations on WhatsApp, bookings, questions, follow-ups, mostly still need a
+          person on the other end reading, deciding, and typing a reply. That doesn&rsquo;t scale
+          past a certain volume, and it means the business is only ever as fast as whoever is
+          available to answer.
         </p>
       </CaseStudyBlock>
 
-      <CaseStudyBlock num="02" title="The Thinking" raised>
+      <CaseStudyBlock num="02" title="The Approach" raised>
         <p>
-          Rather than a scripted chatbot with a fixed decision tree, the approach was to give the system
-          an AI layer that can actually understand what&rsquo;s being asked, and connect that
-          understanding to real backend actions — checking availability, starting a booking, or handing
-          off to a person when the request goes outside defined rules.
+          Rather than a scripted chatbot with a fixed decision tree, the approach was to give the
+          system an AI layer that can understand what&rsquo;s actually being asked, and connect that
+          understanding to real backend actions: checking availability, starting a booking, or
+          handing off to a person when a request falls outside defined rules.
         </p>
         <p>
-          The AI layer sits between the conversation and the business logic. It doesn&rsquo;t replace
-          the backend — it decides what the backend should do next.
+          The AI layer sits between the conversation and the business logic. It applies clearly
+          defined business rules and AI-assisted logic to route each request; it doesn&rsquo;t
+          replace the backend, it decides what the backend should do next.
         </p>
       </CaseStudyBlock>
 
       <CaseStudyBlock num="03" title="The System">
         <ul>
           <li>WhatsApp API integration for business conversations</li>
-          <li>AI layer for understanding and routing incoming requests</li>
+          <li>An AI/LLM layer for understanding and routing incoming requests</li>
           <li>Backend workflows for booking and travel-related automation</li>
           <li>APIs connecting the conversation layer to business systems</li>
-          <li>Architecture built to extend into a broader SaaS platform</li>
+          <li>Session and workflow state management across a conversation</li>
         </ul>
+        <p>
+          This project is the foundation for <strong>Fudur Automation</strong>, a product Muhammed
+          is currently building to turn repetitive business processes into reusable, AI-powered
+          automation systems. It&rsquo;s an active direction, not a finished platform.
+        </p>
       </CaseStudyBlock>
 
       <CaseStudyBlock num="04" title="Architecture" raised>
@@ -79,21 +85,7 @@ export default function WhatsappAiAutomationPage() {
         </div>
       </CaseStudyBlock>
 
-      <CaseStudyBlock num="05" title="Screens">
-        <div className="placeholder-shot">
-          Screenshot placeholder — add product screenshots or conversation flow examples here.
-        </div>
-      </CaseStudyBlock>
-
-      <CaseStudyBlock num="06" title="The Result" raised>
-        <p>
-          A working AI layer that understands incoming WhatsApp requests and connects them to real
-          backend workflows — the foundation for Fudur Automation&rsquo;s broader direction. No invented
-          figures here — add specific outcomes once confirmed.
-        </p>
-      </CaseStudyBlock>
-
-      <CaseStudyBlock num="07" title="Technology">
+      <CaseStudyBlock num="05" title="Technology">
         <div className="tech-tags">
           <span className="tag">Node.js</span>
           <span className="tag">TypeScript</span>
@@ -102,6 +94,14 @@ export default function WhatsappAiAutomationPage() {
           <span className="tag">REST APIs</span>
           <span className="tag">Vercel</span>
         </div>
+      </CaseStudyBlock>
+
+      <CaseStudyBlock num="06" title="Outcome" raised>
+        <p>
+          A working AI layer that understands incoming WhatsApp requests and routes them to real
+          backend workflows instead of a person doing it manually. It&rsquo;s the base Fudur
+          Automation is being built on, not a finished product yet, an active direction.
+        </p>
       </CaseStudyBlock>
     </CaseStudyShell>
   );

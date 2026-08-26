@@ -5,7 +5,7 @@ import CaseStudyBlock from "@/components/CaseStudyBlock";
 export const metadata: Metadata = {
   title: "GlobeTech — Case Study",
   description:
-    "How Muhammed Abdulwahab built the GlobeTech application and grant platform — workflows, referrals, staff hierarchy, and dashboards.",
+    "How Muhammed Abdulwahab built GlobeTech, an operational platform for application workflows, referrals, staff hierarchy, and administrative dashboards.",
 };
 
 export default function GlobeTechPage() {
@@ -13,45 +13,45 @@ export default function GlobeTechPage() {
     <CaseStudyShell
       eyebrow="Case Study 02"
       title="GlobeTech"
-      lede="A functioning operational platform for application workflows, referrals, and staff hierarchy — built to run a process, not to market one."
+      lede="An operational platform for application workflows, referrals, and staff hierarchy, designed around the process being run rather than a website presenting it."
       meta={[
-        { k: "Domain", v: "Application & grant platform" },
-        { k: "Focus", v: "Workflows, dashboards, staff hierarchy" },
+        { k: "Domain", v: "Application platform" },
+        { k: "Focus", v: "Workflows, referrals, staff hierarchy, dashboards" },
         { k: "Role", v: "Platform build" },
       ]}
       nextHref="/work/whatsapp-ai-automation"
-      nextTitle="WhatsApp / AI Automation Platform"
+      nextTitle="WhatsApp / AI Automation"
     >
       <CaseStudyBlock num="01" title="The Problem">
         <p>
-          Running applications and referrals at any real scale means more than a form and an inbox.
+          Running applications and referrals at any real scale takes more than a form and an inbox.
           GlobeTech needed a system where applications could move through defined stages, staff at
-          different levels could see and act on the right cases, and referrals could be tracked back to
-          their source — without an operations team stitching it together in spreadsheets.
+          different levels could see and act on the right cases, and referrals could be tracked back
+          to their source, without an operations team stitching it together by hand.
         </p>
       </CaseStudyBlock>
 
-      <CaseStudyBlock num="02" title="The Thinking" raised>
+      <CaseStudyBlock num="02" title="The Approach" raised>
         <p>
-          The design question wasn&rsquo;t &ldquo;what does the application form look like&rdquo; — it
-          was &ldquo;what happens to an application after it&rsquo;s submitted, and who needs to see it,
-          in what order.&rdquo; That meant modelling staff hierarchy and permissions as a first-class
-          part of the system, not an afterthought bolted onto a CMS.
+          The design question wasn&rsquo;t what the application form should look like. It was what
+          happens to an application after submission, and who needs to see it, in what order. That
+          meant treating staff hierarchy and referral tracking as first-class parts of the data
+          model, not features bolted on afterward.
         </p>
         <p>
-          Referral tracking and KPI visibility followed the same logic: build the underlying data model
-          correctly first, and the dashboards become a straightforward view on top of it — not a
-          separate reporting project.
+          Once that model was right, dashboards and reporting became a straightforward view on top
+          of it, rather than a separate project of their own.
         </p>
       </CaseStudyBlock>
 
       <CaseStudyBlock num="03" title="The System">
         <ul>
-          <li>Application intake and multi-stage workflow management</li>
-          <li>Referral tracking tied back to source and outcome</li>
-          <li>Role-based staff hierarchy and permissions</li>
-          <li>Dashboards for KPI tracking and operational visibility</li>
-          <li>Centralised data management across the platform</li>
+          <li>Public application intake with multi-stage workflow management</li>
+          <li>Token-based staff referral links, tying each application back to the referring staff member</li>
+          <li>A multi-tier staff hierarchy with role-based permissions</li>
+          <li>An admin dashboard with a performance leaderboard and CSV export</li>
+          <li>Automated onboarding-data sync to Google Sheets on a scheduled job</li>
+          <li>Automated application-confirmation emails, and a bank-data verification and payout-tracking workflow for staff</li>
         </ul>
       </CaseStudyBlock>
 
@@ -74,29 +74,23 @@ export default function GlobeTechPage() {
         </div>
       </CaseStudyBlock>
 
-      <CaseStudyBlock num="05" title="Screens">
-        <div className="placeholder-shot">
-          Screenshot placeholder — add product screenshots of the application workflow and staff dashboard here.
-        </div>
-      </CaseStudyBlock>
-
-      <CaseStudyBlock num="06" title="The Result" raised>
-        <p>
-          Applications, referrals, and staff review now run through one operational platform instead of
-          scattered documents and manual hand-offs. No invented figures here — add specific outcomes
-          once confirmed.
-        </p>
-      </CaseStudyBlock>
-
-      <CaseStudyBlock num="07" title="Technology">
+      <CaseStudyBlock num="05" title="Technology">
         <div className="tech-tags">
           <span className="tag">Next.js</span>
-          <span className="tag">React</span>
           <span className="tag">TypeScript</span>
-          <span className="tag">Supabase</span>
-          <span className="tag">PostgreSQL</span>
-          <span className="tag">REST APIs</span>
+          <span className="tag">Firebase</span>
+          <span className="tag">Firestore</span>
+          <span className="tag">Google Sheets API</span>
+          <span className="tag">Resend</span>
         </div>
+      </CaseStudyBlock>
+
+      <CaseStudyBlock num="06" title="Outcome" raised>
+        <p>
+          Applications, referrals, and staff review now run through one platform instead of
+          scattered spreadsheets and manual hand-offs, built around the actual operational process
+          rather than sitting on top of it as a marketing page.
+        </p>
       </CaseStudyBlock>
     </CaseStudyShell>
   );
