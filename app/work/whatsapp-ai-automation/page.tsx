@@ -5,7 +5,7 @@ import CaseStudyBlock from "@/components/CaseStudyBlock";
 export const metadata: Metadata = {
   title: "WhatsApp / AI Automation — Case Study",
   description:
-    "How Bidemi Abdulwahab built AI-assisted WhatsApp automation for business conversations and booking workflows, the foundation for Fudur Automation.",
+    "How Bidemi built AI-assisted WhatsApp automation for business conversations and booking workflows, the foundation for Fudur Automation.",
 };
 
 export default function WhatsappAiAutomationPage() {

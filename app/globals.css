@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* ==========================================================================
-   Bidemi Abdulwahab — Portfolio
+   Bidemi — Portfolio
    Bold editorial system: warm flame orange/red + near-black + cream.
    Display: Bodoni Moda (variable, luxury serif) · Body: Inter · Mono: JetBrains Mono
    ========================================================================== */
@@ -628,13 +628,12 @@ h1, h2, h3, h4 {
 .service-row:last-child { border-bottom: 1px solid var(--line); }
 .service-row__num { font-family: var(--font-mono); font-size: 13px; color: var(--flame-dark); }
 .service-row__title {
-  font-family: var(--font-display);
-  font-weight: 700;
+  font-family: var(--font-body);
+  font-weight: 800;
   font-size: clamp(22px, 2.6vw, 32px);
-  letter-spacing: -0.005em;
+  letter-spacing: -0.01em;
   color: var(--flame);
   line-height: 1.1;
-  font-variation-settings: "opsz" 35;
 }
 .service-row__desc { color: var(--ink-soft); margin: 0 0 14px; max-width: 48ch; }
 .service-row__tags { display: flex; flex-wrap: wrap; gap: 8px; }

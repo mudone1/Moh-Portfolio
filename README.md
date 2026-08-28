@@ -1,4 +1,4 @@
-# Bidemi Abdulwahab — Portfolio (Next.js)
+# Bidemi — Portfolio (Next.js)
 
 A Next.js 14 (App Router) + TypeScript + Tailwind CSS project. Bold, editorial
 design system — warm flame orange/red, near-black, and cream — with a giant

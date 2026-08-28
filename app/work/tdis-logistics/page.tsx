@@ -5,7 +5,7 @@ import CaseStudyBlock from "@/components/CaseStudyBlock";
 export const metadata: Metadata = {
   title: "TDIS Logistics — Case Study",
   description:
-    "How Bidemi Abdulwahab built operational software around a real travel and ticketing business: automation, reporting, and WhatsApp-based workflows for TDIS Logistics.",
+    "How Bidemi built operational software around a real travel and ticketing business: automation, reporting, and WhatsApp-based workflows for TDIS Logistics.",
 };
 
 export default function TdisLogisticsPage() {

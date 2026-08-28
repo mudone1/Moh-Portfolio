@@ -17,11 +17,11 @@ export default function Hero() {
 
         <div className="hero__stage">
           <h1 className="sr-only">
-            Bidemi Abdulwahab — AI Automation &amp; Full-Stack Systems Builder
+            Bidemi — AI Automation &amp; Full-Stack Systems Builder
           </h1>
 
           <div className="hero__name-bg" aria-hidden="true">
-            <span>BIDEMI</span>
+            <span>BUILDER</span>
           </div>
 
           <div
@@ -70,7 +70,7 @@ export default function Hero() {
           <div className="hero__portrait">
             <Image
               src="/muhammed-cutout.png"
-              alt="Bidemi Abdulwahab"
+              alt="Bidemi"
               width={1103}
               height={1078}
               priority
@@ -93,7 +93,7 @@ export default function Hero() {
 
           <div className="hero__firstname" aria-hidden="true">
             <AnimatedHeadline as="h2" className="hero__firstname-inner">
-              ABDULWAHAB
+              BIDEMI
             </AnimatedHeadline>
           </div>
         </div>

@@ -6,13 +6,13 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://moh-portfolio-seven.vercel.app"),
   title: {
-    default: "Bidemi Abdulwahab — AI Automation & Full-Stack Systems Builder",
-    template: "%s · Bidemi Abdulwahab",
+    default: "Bidemi — AI Automation & Full-Stack Systems Builder",
+    template: "%s · Bidemi",
   },
   description:
-    "Bidemi Abdulwahab designs and builds automation, AI integrations, and full-stack systems that turn manual business operations into working software.",
+    "Bidemi designs and builds automation, AI integrations, and full-stack systems that turn manual business operations into working software.",
   openGraph: {
-    title: "Bidemi Abdulwahab — AI Automation & Full-Stack Systems Builder",
+    title: "Bidemi — AI Automation & Full-Stack Systems Builder",
     description: "I build systems that turn complex business processes into simple software.",
     type: "website",
     images: ["/og-cover.png"],

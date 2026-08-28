@@ -34,7 +34,7 @@ export default function Nav({ flameHero = false }: { flameHero?: boolean }) {
         <div className="nav__inner">
           <Link href="/#top" className="nav__name">
             <span className="dot" aria-hidden="true" />
-            Bidemi Abdulwahab
+            Bidemi
           </Link>
 
           <nav aria-label="Primary">

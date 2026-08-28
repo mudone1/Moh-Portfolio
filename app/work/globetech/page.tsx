@@ -5,7 +5,7 @@ import CaseStudyBlock from "@/components/CaseStudyBlock";
 export const metadata: Metadata = {
   title: "GlobeTech — Case Study",
   description:
-    "How Bidemi Abdulwahab built GlobeTech, an operational platform for application workflows, referrals, staff hierarchy, and administrative dashboards.",
+    "How Bidemi built GlobeTech, an operational platform for application workflows, referrals, staff hierarchy, and administrative dashboards.",
 };
 
 export default function GlobeTechPage() {

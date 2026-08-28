@@ -13,9 +13,11 @@ import type { ReactNode } from "react";
 export default function TiltCard({
   children,
   className,
+  style,
 }: {
   children: ReactNode;
   className?: string;
+  style?: React.CSSProperties;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const prefersReducedMotion = useReducedMotion();
@@ -28,7 +30,11 @@ export default function TiltCard({
   const rotateY = useTransform(springX, [-0.5, 0.5], [-7, 7]);
 
   if (prefersReducedMotion) {
-    return <div className={className}>{children}</div>;
+    return (
+      <div className={className} style={style}>
+        {children}
+      </div>
+    );
   }
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -48,7 +54,7 @@ export default function TiltCard({
     <motion.div
       ref={ref}
       className={className}
-      style={{ rotateX, rotateY, transformPerspective: 800 }}
+      style={{ ...style, rotateX, rotateY, transformPerspective: 800 }}
       whileHover={{ scale: 1.015, y: -6 }}
       transition={{ type: "spring", stiffness: 260, damping: 20 }}
       onMouseMove={handleMouseMove}
